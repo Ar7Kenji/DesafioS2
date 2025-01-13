@@ -45,16 +45,16 @@ function NameValidate(){
 function NumberValidate(){
     const sanitizedValue = CardNumber.value.replace(/\D/g, '').slice(0, 16);
     CardNumber.value = sanitizedValue.replace(/(\d{4})/g, '$1 ').trim();
-    if (sanitizedValue.length !== 16) {
-      setError(1);
-    } else {
+    if (sanitizedValue.length === 16) {
       removeError(1);
+    } else {
+      setError(1);
     }
 }
 
 function ExpMonthValidate(){
     const MonthValue = CardExpMonth.value;
-    if(MonthValue > 1 && MonthValue < 12 && MonthValue.length === 2){
+    if(MonthValue >= 1 && MonthValue <= 12 && MonthValue.length === 2){
         removeError(2);
     }
     else{
