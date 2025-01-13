@@ -74,7 +74,7 @@ function ExpYearValidate(){
 
 function CVCValidate(){
     const CVCValue = CardCVC.value;
-    if(CVCValue > 0 && CVCValue.length === 3){
+    if(CVCValue >= 0 && CVCValue.length === 3){
         removeError(4);
     }
     else{
