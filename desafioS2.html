@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="desafioS2.css">
+        <title>Card Form Page</title>
+    </head>
+    <body>
+        <div class="CartaoContainer">
+            <img src="Imagens/bg-main-desktop.png" class="DesktopImage" alt="Background para Desktop">
+            <img src="Imagens/bg-card-front.png" class="CardFront" alt="Front of Card">
+            <img src="Imagens/bg-card-back.png" class="CardBack" alt="Back of Card">
+            <img src="Imagens/card-logo.svg" class="CardLogo" alt="Card Logo">
+
+            <div class="CardInformationFront">
+                <p class="InCard_Number">0000 0000 0000 0000</p>
+                <div class="NameDate">
+                    <p class="InCardHolder_Name">JANE APPLESEED</p>
+                    <p class="InCard_Exp_Month">00</p>
+                    <p class="InCard_Exp_Year">00</p>
+                </div>
+            </div>
+            <p class="InCard_CVC">000</p>
+    
+            <div class="CardForm">
+                <div>
+                    <p class="CardName">CARDHOLDER NAME</p>
+                    <input type="text" placeholder="e.g. Jane Appleseed" class="NameInput inputs_required" oninput="NameValidate()">
+                    <span class="span_required">The name must have at least 3 letters.</span>
+                </div>
+
+                <div>
+                    <p class="CardNumber">CARD NUMBER</p>
+                    <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="NumberInput inputs_required" oninput="NumberValidate()">
+                    <span class="span_required">The card number must consist of 16 digits.</span>
+                </div>
+
+                <div class="Card_Date_CVC">
+                    <div class="ExpDate">
+                        <p class="Card_ExpDate">EXP. DATE (MM/YY)</p>
+                        <div class="ExpDate_Inputs">
+                            <div class="Exp_Month">
+                                <input type="text" placeholder="MM" class="MonthInput inputs_required" maxlength="2" oninput="ExpMonthValidate()">
+                                <span class="span_required">The month must be a number between 01 and 12.</span>
+                            </div>
+                            <div class="Exp_Year">
+                                <input type="text" placeholder="YY" class="YearInput inputs_required" maxlength="2" oninput="ExpYearValidate()">
+                                <span class="span_required">The year must be written with only its last two digits.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Card_CVC">
+                        <p class="CardCVC">CVC</p>
+                        <input type="text" placeholder="e.g. 123" class="CVCInput inputs_required" maxlength="3" oninput="CVCValidate()">
+                        <span class="span_required">The Card Verification Code (CVC) must have 3 digits.</span>   
+                    </div>
+                </div>
+
+                <button class="ConfirmButton">Confirm</button>
+                <p class="ErrorInForm">Please fill in all fields correctly.</p>
+
+            </div>
+
+            <div class="SuccessForm">
+                <div>
+                    <img src="Imagens/icon-complete.svg" alt="Success Icon">
+                    <p class="Thank">Thank you!</p>
+                    <p class="Message">We've added your card details</p>
+                    <button class="ContinueButton">Continue</button>
+                </div>
+            </div>
+        </div>
+    <script src="desafioS2.js"></script>
+    </body>
+</html>
